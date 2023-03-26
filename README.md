@@ -1,4 +1,7 @@
 # AngularMeanstackAuthentication
+## Backend
+* Como backend hemos utilizado nestjs9- y mysql
+* Para utilizar Nodejs como backend y mongodb habria que hacer algunas modificaciones en angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
