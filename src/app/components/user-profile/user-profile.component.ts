@@ -15,9 +15,10 @@ export class UserProfileComponent implements OnInit {
     public authService: AuthService,
     private actRoute: ActivatedRoute
   ) {
-    let id = this.actRoute.snapshot.paramMap.get('id');
+    let usuario = this.actRoute.snapshot.paramMap.get('usuario');
     this.authService.getUserProfile().subscribe((res) => {
-      this.currentUser = res.msg;
+      console.log('user-profile.component.ts',res)
+      this.currentUser = res.username;
     });
   }
 

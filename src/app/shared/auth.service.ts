@@ -31,11 +31,11 @@ export class AuthService {
     return this.http
       .post<any>(`${this.endpoint}auth/login`, user)
       .subscribe((res: any) => {
-        console.log('auth-servicio',res)
+        console.log('auth-servicio',res.user.id)
         localStorage.setItem('access_token', res.access_token);
         this.getUserProfile().subscribe((res) => {
-          this.currentUser = res;
-          this.router.navigate(['user-profile/']);
+          this.currentUser = res
+          this.router.navigate(['user-profile/'+ this.currentUser]);
         });
       });
   }
